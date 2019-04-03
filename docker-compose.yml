@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  sage:
+    image: sagemath/sagemath:8.5
+    container_name: "sage-hueage"
+    volumes:
+            - ./data/:/home/nicki/SAGE/sukpzdc:rw
+    ports: 
+      - 8888:8888
+    command: sage-jupyter --NotebookApp.token=''
